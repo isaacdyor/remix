@@ -1,0 +1,17 @@
+{
+  "expo": {
+    "scheme": "reroll",
+    "userInterfaceStyle": "automatic",
+    "orientation": "default",
+    "web": {
+      "bundler": "metro"
+    },
+    "name": "reroll",
+    "slug": "reroll",
+    "plugins": ["expo-font"],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    }
+  }
+}
