@@ -1,5 +1,5 @@
 {
-  "name": "@reroll/env",
+  "name": "@remix/env",
   "version": "0.0.0",
   "private": true,
   "type": "module",
@@ -13,8 +13,8 @@
     "zod": "catalog:"
   },
   "devDependencies": {
-    "@reroll/config": "workspace:*",
-    "@reroll/infra": "workspace:*",
+    "@remix/config": "workspace:*",
+    "@remix/infra": "workspace:*",
     "typescript": "catalog:"
   }
 }

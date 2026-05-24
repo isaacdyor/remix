@@ -1,4 +1,4 @@
-import { api } from "@reroll/backend/convex/_generated/api";
+import { api } from "@remix/backend/convex/_generated/api";
 import { createFileRoute } from "@tanstack/react-router";
 import { Authenticated, AuthLoading, Unauthenticated, useQuery } from "convex/react";
 import { useState } from "react";

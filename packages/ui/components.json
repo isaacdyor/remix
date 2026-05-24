@@ -12,11 +12,11 @@
   },
   "iconLibrary": "lucide",
   "aliases": {
-    "components": "@reroll/ui/components",
-    "utils": "@reroll/ui/lib/utils",
-    "hooks": "@reroll/ui/hooks",
-    "lib": "@reroll/ui/lib",
-    "ui": "@reroll/ui/components"
+    "components": "@remix/ui/components",
+    "utils": "@remix/ui/lib/utils",
+    "hooks": "@remix/ui/hooks",
+    "lib": "@remix/ui/lib",
+    "ui": "@remix/ui/components"
   },
   "menuColor": "default",
   "menuAccent": "subtle",

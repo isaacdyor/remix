@@ -1,5 +1,5 @@
 {
-  "name": "@reroll/infra",
+  "name": "@remix/infra",
   "private": true,
   "type": "module",
   "scripts": {
@@ -12,7 +12,7 @@
     "zod": "catalog:"
   },
   "devDependencies": {
-    "@reroll/config": "workspace:*",
+    "@remix/config": "workspace:*",
     "alchemy": "catalog:",
     "typescript": "catalog:"
   }

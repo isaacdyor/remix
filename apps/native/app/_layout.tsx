@@ -1,6 +1,7 @@
+import "expo-dev-client";
 import "@/global.css";
 import { ConvexBetterAuthProvider } from "@convex-dev/better-auth/react";
-import { env } from "@reroll/env/native";
+import { env } from "@remix/env/native";
 import { ConvexReactClient } from "convex/react";
 import { Stack } from "expo-router";
 import { HeroUINativeProvider } from "heroui-native";
@@ -22,14 +23,17 @@ function StackLayout() {
   return (
     <Stack screenOptions={{}}>
       <Stack.Screen name="(drawer)" options={{ headerShown: false }} />
-      <Stack.Screen name="modal" options={{ title: "Modal", presentation: "modal" }} />
+      <Stack.Screen
+        name="modal"
+        options={{ title: "Modal", presentation: "modal" }}
+      />
     </Stack>
   );
 }
 
 export default function Layout() {
   return (
-    <ConvexBetterAuthProvider client={convex} authClient={authClient}>
+    <ConvexBetterAuthProvider authClient={authClient} client={convex}>
       <GestureHandlerRootView style={{ flex: 1 }}>
         <KeyboardProvider>
           <AppThemeProvider>

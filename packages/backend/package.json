@@ -1,5 +1,5 @@
 {
-  "name": "@reroll/backend",
+  "name": "@remix/backend",
   "version": "1.0.0",
   "description": "",
   "license": "ISC",
@@ -17,7 +17,7 @@
     "zod": "catalog:"
   },
   "devDependencies": {
-    "@reroll/config": "workspace:*",
+    "@remix/config": "workspace:*",
     "@types/node": "^24.3.0",
     "typescript": "catalog:"
   }

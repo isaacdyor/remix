@@ -1,17 +1,20 @@
 {
   "expo": {
-    "scheme": "reroll",
+    "scheme": "remix",
     "userInterfaceStyle": "automatic",
     "orientation": "default",
     "web": {
       "bundler": "metro"
     },
-    "name": "reroll",
-    "slug": "reroll",
+    "name": "remix",
+    "slug": "remix",
     "plugins": ["expo-font"],
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
+    },
+    "ios": {
+      "bundleIdentifier": "com.anonymous.remix"
     }
   }
 }

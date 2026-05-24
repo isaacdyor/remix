@@ -1,5 +1,5 @@
-import { api } from "@reroll/backend/convex/_generated/api";
-import { Button } from "@reroll/ui/components/button";
+import { api } from "@remix/backend/convex/_generated/api";
+import { Button } from "@remix/ui/components/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -8,7 +8,7 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@reroll/ui/components/dropdown-menu";
+} from "@remix/ui/components/dropdown-menu";
 import { useNavigate } from "@tanstack/react-router";
 import { useQuery } from "convex/react";
 

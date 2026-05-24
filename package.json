@@ -1,5 +1,5 @@
 {
-  "name": "reroll",
+  "name": "remix",
   "private": true,
   "workspaces": {
     "packages": [
@@ -27,22 +27,22 @@
     "check-types": "turbo check-types",
     "dev:native": "turbo -F native dev",
     "dev:web": "turbo -F web dev",
-    "dev:server": "turbo -F @reroll/backend dev",
-    "dev:setup": "turbo -F @reroll/backend dev:setup",
-    "deploy": "turbo -F @reroll/infra deploy",
-    "destroy": "turbo -F @reroll/infra destroy",
+    "dev:server": "turbo -F @remix/backend dev",
+    "dev:setup": "turbo -F @remix/backend dev:setup",
+    "deploy": "turbo -F @remix/infra deploy",
+    "destroy": "turbo -F @remix/infra destroy",
     "check": "ultracite check",
     "fix": "ultracite fix"
   },
   "dependencies": {
-    "@reroll/env": "workspace:*",
+    "@remix/env": "workspace:*",
     "dotenv": "catalog:",
     "zod": "catalog:"
   },
   "devDependencies": {
     "@biomejs/biome": "2.4.15",
     "@cloudflare/workers-types": "^4.20251213.0",
-    "@reroll/config": "workspace:*",
+    "@remix/config": "workspace:*",
     "turbo": "^2.8.12",
     "typescript": "catalog:",
     "ultracite": "7.7.0"

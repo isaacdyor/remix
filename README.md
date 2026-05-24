@@ -1,4 +1,4 @@
-# reroll
+# remix
 
 This project was created with [Better-T-Stack](https://github.com/AmanVarshney01/create-better-t-stack), a modern TypeScript stack that combines React, TanStack Router, Convex, and more.
 
@@ -63,7 +63,7 @@ npx shadcn@latest add accordion dialog popover sheet table -c packages/ui
 Import shared components like this:
 
 ```tsx
-import { Button } from "@reroll/ui/components/button";
+import { Button } from "@remix/ui/components/button";
 ```
 
 ### Add app-specific blocks
@@ -82,7 +82,7 @@ For more details, see the guide on [Deploying to Cloudflare with Alchemy](https:
 ## Project Structure
 
 ```
-reroll/
+remix/
 ├── apps/
 │   ├── web/         # Frontend application (React + TanStack Router)
 │   ├── native/      # Mobile application (React Native, Expo)

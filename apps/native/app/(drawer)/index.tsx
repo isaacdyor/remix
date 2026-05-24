@@ -1,4 +1,4 @@
-import { api } from "@reroll/backend/convex/_generated/api";
+import { api } from "@remix/backend/convex/_generated/api";
 import { useConvexAuth, useQuery } from "convex/react";
 import { Button, Chip, Separator, Spinner, Surface, useThemeColor } from "heroui-native";
 import { Text, View } from "react-native";

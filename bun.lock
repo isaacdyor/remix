@@ -5,14 +5,14 @@
     "": {
       "name": "reroll",
       "dependencies": {
-        "@reroll/env": "workspace:*",
+        "@remix/env": "workspace:*",
         "dotenv": "catalog:",
         "zod": "catalog:",
       },
       "devDependencies": {
         "@biomejs/biome": "2.4.15",
         "@cloudflare/workers-types": "^4.20251213.0",
-        "@reroll/config": "workspace:*",
+        "@remix/config": "workspace:*",
         "turbo": "^2.8.12",
         "typescript": "catalog:",
         "ultracite": "7.7.0",
@@ -27,14 +27,15 @@
         "@expo/metro-runtime": "~56.0.11",
         "@expo/vector-icons": "^15.1.1",
         "@gorhom/bottom-sheet": "^5.2.14",
-        "@reroll/backend": "workspace:*",
-        "@reroll/env": "workspace:*",
+        "@remix/backend": "workspace:*",
+        "@remix/env": "workspace:*",
         "@tanstack/react-form": "catalog:",
         "better-auth": "catalog:",
         "convex": "catalog:",
         "dotenv": "catalog:",
         "expo": "~56.0.3",
         "expo-constants": "~56.0.14",
+        "expo-dev-client": "~56.0.15",
         "expo-font": "~56.0.5",
         "expo-haptics": "~56.0.3",
         "expo-linking": "~56.0.11",
@@ -62,7 +63,7 @@
         "zod": "catalog:",
       },
       "devDependencies": {
-        "@reroll/config": "workspace:*",
+        "@remix/config": "workspace:*",
         "@types/node": "^25.9.1",
         "@types/react": "~19.2.14",
         "typescript": "catalog:",
@@ -74,9 +75,9 @@
       "dependencies": {
         "@convex-dev/better-auth": "catalog:",
         "@hookform/resolvers": "^5.2.2",
-        "@reroll/backend": "workspace:*",
-        "@reroll/env": "workspace:*",
-        "@reroll/ui": "workspace:*",
+        "@remix/backend": "workspace:*",
+        "@remix/env": "workspace:*",
+        "@remix/ui": "workspace:*",
         "@tailwindcss/vite": "^4.2.2",
         "@tanstack/react-form": "catalog:",
         "@tanstack/react-router": "^1.168.22",
@@ -91,7 +92,7 @@
         "zod": "catalog:",
       },
       "devDependencies": {
-        "@reroll/config": "workspace:*",
+        "@remix/config": "workspace:*",
         "@tanstack/react-router-devtools": "^1.166.13",
         "@tanstack/router-plugin": "^1.167.22",
         "@types/node": "^22.13.14",
@@ -106,7 +107,7 @@
       },
     },
     "packages/backend": {
-      "name": "@reroll/backend",
+      "name": "@remix/backend",
       "version": "1.0.0",
       "dependencies": {
         "@better-auth/expo": "catalog:",
@@ -117,17 +118,17 @@
         "zod": "catalog:",
       },
       "devDependencies": {
-        "@reroll/config": "workspace:*",
+        "@remix/config": "workspace:*",
         "@types/node": "^24.3.0",
         "typescript": "catalog:",
       },
     },
     "packages/config": {
-      "name": "@reroll/config",
+      "name": "@remix/config",
       "version": "0.0.0",
     },
     "packages/env": {
-      "name": "@reroll/env",
+      "name": "@remix/env",
       "version": "0.0.0",
       "dependencies": {
         "@t3-oss/env-core": "^0.13.1",
@@ -135,25 +136,25 @@
         "zod": "catalog:",
       },
       "devDependencies": {
-        "@reroll/config": "workspace:*",
-        "@reroll/infra": "workspace:*",
+        "@remix/config": "workspace:*",
+        "@remix/infra": "workspace:*",
         "typescript": "catalog:",
       },
     },
     "packages/infra": {
-      "name": "@reroll/infra",
+      "name": "@remix/infra",
       "dependencies": {
         "dotenv": "catalog:",
         "zod": "catalog:",
       },
       "devDependencies": {
-        "@reroll/config": "workspace:*",
+        "@remix/config": "workspace:*",
         "alchemy": "catalog:",
         "typescript": "catalog:",
       },
     },
     "packages/ui": {
-      "name": "@reroll/ui",
+      "name": "@remix/ui",
       "version": "0.0.0",
       "dependencies": {
         "@base-ui/react": "^1.0.0",
@@ -169,7 +170,7 @@
         "tw-animate-css": "^1.3.4",
       },
       "devDependencies": {
-        "@reroll/config": "workspace:*",
+        "@remix/config": "workspace:*",
         "@types/react": "^19.2.15",
         "@types/react-dom": "catalog:",
         "tailwindcss": "^4.1.18",
@@ -831,15 +832,15 @@
 
     "@react-native/virtualized-lists": ["@react-native/virtualized-lists@0.85.3", "", { "dependencies": { "invariant": "^2.2.4", "nullthrows": "^1.1.1" }, "peerDependencies": { "@types/react": "^19.2.0", "react": "*", "react-native": "0.85.3" }, "optionalPeers": ["@types/react"] }, "sha512-dsCjI//OIPEUJMyNHp4l7zNLVjCx7bcaRUceOCkU+IB17hkbtbGWvi7HjGFSzy7FJGmS/MOlcfpb72xXiy1Oig=="],
 
-    "@reroll/backend": ["@reroll/backend@workspace:packages/backend"],
+    "@remix/backend": ["@remix/backend@workspace:packages/backend"],
 
-    "@reroll/config": ["@reroll/config@workspace:packages/config"],
+    "@remix/config": ["@remix/config@workspace:packages/config"],
 
-    "@reroll/env": ["@reroll/env@workspace:packages/env"],
+    "@remix/env": ["@remix/env@workspace:packages/env"],
 
-    "@reroll/infra": ["@reroll/infra@workspace:packages/infra"],
+    "@remix/infra": ["@remix/infra@workspace:packages/infra"],
 
-    "@reroll/ui": ["@reroll/ui@workspace:packages/ui"],
+    "@remix/ui": ["@remix/ui@workspace:packages/ui"],
 
     "@rolldown/binding-android-arm64": ["@rolldown/binding-android-arm64@1.0.2", "", { "os": "android", "cpu": "arm64" }, "sha512-ZS4D1JPGn/MYQN/SYDWftIE/nVsM8j/AFOYEzAoOE2O3NktQOZru+/vYXGbR/qtdLdIfGCP0lcoJiYVzsEz+iQ=="],
 
@@ -1335,6 +1336,14 @@
 
     "expo-constants": ["expo-constants@56.0.15", "", { "dependencies": { "@expo/env": "~2.3.0" }, "peerDependencies": { "expo": "*", "react-native": "*" } }, "sha512-7187sd55swLX+CM0noAV5LreEgkUaDG/zEXy9quonfzKpJxy8zJAszp9S++xOx/FcqBVEEEcQhE8tKTujwL8fg=="],
 
+    "expo-dev-client": ["expo-dev-client@56.0.15", "", { "dependencies": { "expo-dev-launcher": "~56.0.15", "expo-dev-menu": "~56.0.14", "expo-dev-menu-interface": "~56.0.0", "expo-manifests": "~56.0.4", "expo-updates-interface": "~56.0.1" }, "peerDependencies": { "expo": "*" } }, "sha512-YJBO0xMv0CRhVhZu4NPWoR0zS/nyhbjpBiEhEd4SOD/mcmW1I1ncURLn8Ej63yJjuCGL6pFQLkCskAak1OJyuA=="],
+
+    "expo-dev-launcher": ["expo-dev-launcher@56.0.15", "", { "dependencies": { "@expo/schema-utils": "^56.0.0", "expo-dev-menu": "~56.0.14", "expo-manifests": "~56.0.4" }, "peerDependencies": { "expo": "*", "react-native": "*" } }, "sha512-KVG8haacJiYHu7wLJiDYQbKM0CqFBqf0BJ9YvWWBhxOZjNOtwspVIsKS4idiIOeQsFCRb2Axt8svQ+opvuvE6A=="],
+
+    "expo-dev-menu": ["expo-dev-menu@56.0.14", "", { "dependencies": { "expo-dev-menu-interface": "~56.0.0" }, "peerDependencies": { "expo": "*", "react-native": "*" } }, "sha512-4dx14nedjWSCdpPKj74IGIfuM5nd2ePMpD3vNraq+srsZzWfNMh9gLFwcXtfQIpgXkHavO5178bJ3VCJVsnNsg=="],
+
+    "expo-dev-menu-interface": ["expo-dev-menu-interface@56.0.1", "", { "peerDependencies": { "expo": "*" } }, "sha512-odATx0ZL/Kis10sKSBiKiGQxAB6coSi/KQtKcMhnQVNno6FkRh5/4e5BqcEvpq2rNMTiQp4ytNAQHtdwbPXvGA=="],
+
     "expo-file-system": ["expo-file-system@56.0.7", "", { "peerDependencies": { "expo": "*", "react-native": "*" } }, "sha512-dcKzo8ShPloM7jgfnMcJStgQebhP8owVjCkNI/aX6NMFV1CYB8bxKGMdnzJ3mXk5nfaiW+F/lSKr2UIJ02WAUA=="],
 
     "expo-font": ["expo-font@56.0.5", "", { "dependencies": { "fontfaceobserver": "^2.1.0" }, "peerDependencies": { "expo": "*", "react": "*", "react-native": "*" } }, "sha512-WLoDu9hlEgPRKXJRR01HFLJ6Z2tFcORX/WFPRYBndmYc5kjQrFGH/j4BRaF3aBRPyYEAUXiUJybNLXkKCwEXQw=="],
@@ -1343,9 +1352,13 @@
 
     "expo-haptics": ["expo-haptics@56.0.3", "", { "peerDependencies": { "expo": "*" } }, "sha512-ycoahZJnR9tWAVh/0mJYxbETtHRYaWjiWS8cHlP6aDGU6Q6Y8rZ5NKsuBwWw6HR2Pe30mfVFgbF2HrBR6gtYmw=="],
 
+    "expo-json-utils": ["expo-json-utils@56.0.0", "", {}, "sha512-lUqyv9aIGDbYTQ5Nux2FnH2/Dz0w5uJ8Pr080eS0StXi2jr5OmuMNErpzUnpfnYOU55xKotd4AHv68PfV/ludg=="],
+
     "expo-keep-awake": ["expo-keep-awake@56.0.3", "", { "peerDependencies": { "expo": "*", "react": "*" } }, "sha512-CLMJXtEiMKknD3Rpm8CRwE6ZJUzu2yCEmRk1sgfHAJ1zIbuEWY3dpPDubtsnuzWm+2k6Sru+yaFbYsvPWmTiBA=="],
 
     "expo-linking": ["expo-linking@56.0.11", "", { "dependencies": { "expo-constants": "~56.0.14", "invariant": "^2.2.4" }, "peerDependencies": { "react": "*", "react-native": "*" } }, "sha512-MEPgML2mqm2Y8rP6zTleOpCmYiFyfQfNSOBpDIb7CYpbDQleStugvceKsEsL4v8C0Dl5u7e8KkkrbqmgpOOIBw=="],
+
+    "expo-manifests": ["expo-manifests@56.0.4", "", { "dependencies": { "expo-json-utils": "~56.0.0" }, "peerDependencies": { "expo": "*" } }, "sha512-Fokawl2UkiExIF0bqGoblRFA8lYpROVD+EpvDwSW4LgqQyPwNua1gLSgHZjdl5GsVugfRMMWE3LHaibDyX93hw=="],
 
     "expo-modules-autolinking": ["expo-modules-autolinking@56.0.12", "", { "dependencies": { "@expo/require-utils": "^56.1.3", "@expo/spawn-async": "^1.8.0", "chalk": "^4.1.0", "commander": "^7.2.0" }, "bin": { "expo-modules-autolinking": "bin/expo-modules-autolinking.js" } }, "sha512-Sn/LiLSL4as/YOGoatsuRQYS7rxAQHK2oYbFMT/I3iIXHLSeb0DQeuAIytVQ9ypWWck9s2krH2T6NeztyftnaA=="],
 
@@ -1364,6 +1377,8 @@
     "expo-status-bar": ["expo-status-bar@56.0.4", "", { "peerDependencies": { "expo": "*", "react": "*", "react-native": "*" } }, "sha512-IGs/fDfkHXofy2ZQrGiXayhFK04HB85FZXorhcEhDZEcqASKgSqpak+HwUtAaR0MeTJwWyHNF7I6VmVbbp8EcA=="],
 
     "expo-symbols": ["expo-symbols@56.0.5", "", { "dependencies": { "@expo-google-fonts/material-symbols": "^0.4.1", "sf-symbols-typescript": "^2.0.0" }, "peerDependencies": { "expo": "*", "expo-font": "*", "react": "*", "react-native": "*" } }, "sha512-RIukH0Xo80C7RU8qreipL2SPy2Py+Km8JFPbCmbPQpHkM3DW9Znlmg6VfhzbtUOlO5EuNSF0lAJ3l2VJi6qYrw=="],
+
+    "expo-updates-interface": ["expo-updates-interface@56.0.2", "", { "peerDependencies": { "expo": "*" } }, "sha512-eWTwSZ9y8vrULG2oBn2TQSSIwBGSq/TxGJ3jY6tuVS2FWH/ASRIiKs3zkUZTRoC3ZuV2alz0mUClYV7nNrFx8g=="],
 
     "expo-web-browser": ["expo-web-browser@56.0.5", "", { "peerDependencies": { "expo": "*", "react-native": "*" } }, "sha512-kaN+wcR5lHwPCH1IgrU1XyPUQvBRzdF1TMp65uAF9iUCyipqYnmrvV87eqAmrdkFFopWVgU7FcxPu1UZw+gvUQ=="],
 

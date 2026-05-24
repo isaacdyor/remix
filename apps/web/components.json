@@ -13,8 +13,8 @@
   "iconLibrary": "lucide",
   "aliases": {
     "components": "@/components",
-    "utils": "@reroll/ui/lib/utils",
-    "ui": "@reroll/ui/components",
+    "utils": "@remix/ui/lib/utils",
+    "ui": "@remix/ui/components",
     "lib": "@/lib",
     "hooks": "@/hooks"
   },

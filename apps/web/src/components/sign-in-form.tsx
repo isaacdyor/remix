@@ -1,6 +1,6 @@
-import { Button } from "@reroll/ui/components/button";
-import { Input } from "@reroll/ui/components/input";
-import { Label } from "@reroll/ui/components/label";
+import { Button } from "@remix/ui/components/button";
+import { Input } from "@remix/ui/components/input";
+import { Label } from "@remix/ui/components/label";
 import { useForm } from "@tanstack/react-form";
 import { useNavigate } from "@tanstack/react-router";
 import { toast } from "sonner";

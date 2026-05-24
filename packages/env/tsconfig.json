@@ -1,5 +1,5 @@
 {
-  "extends": "@reroll/config/tsconfig.base.json",
+  "extends": "@remix/config/tsconfig.base.json",
   "compilerOptions": {
     "strictNullChecks": true
   }

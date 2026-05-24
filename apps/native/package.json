@@ -5,9 +5,10 @@
   "main": "expo-router/entry",
   "scripts": {
     "start": "expo start",
-    "dev": "expo start --clear",
+    "dev": "expo start --dev-client --clear",
     "android": "expo run:android",
     "ios": "expo run:ios",
+    "ios:sim": "DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer expo run:ios",
     "prebuild": "expo prebuild",
     "web": "expo start --web"
   },
@@ -17,14 +18,15 @@
     "@expo/metro-runtime": "~56.0.11",
     "@expo/vector-icons": "^15.1.1",
     "@gorhom/bottom-sheet": "^5.2.14",
-    "@reroll/backend": "workspace:*",
-    "@reroll/env": "workspace:*",
+    "@remix/backend": "workspace:*",
+    "@remix/env": "workspace:*",
     "@tanstack/react-form": "catalog:",
     "better-auth": "catalog:",
     "convex": "catalog:",
     "dotenv": "catalog:",
     "expo": "~56.0.3",
     "expo-constants": "~56.0.14",
+    "expo-dev-client": "~56.0.15",
     "expo-font": "~56.0.5",
     "expo-haptics": "~56.0.3",
     "expo-linking": "~56.0.11",
@@ -52,7 +54,7 @@
     "zod": "catalog:"
   },
   "devDependencies": {
-    "@reroll/config": "workspace:*",
+    "@remix/config": "workspace:*",
     "@types/node": "^25.9.1",
     "@types/react": "~19.2.14",
     "typescript": "catalog:"

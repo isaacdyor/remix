@@ -1,10 +1,10 @@
 {
-  "extends": "@reroll/config/tsconfig.base.json",
+  "extends": "@remix/config/tsconfig.base.json",
   "compilerOptions": {
     "jsx": "react-jsx",
     "lib": ["ESNext", "DOM", "DOM.Iterable"],
     "paths": {
-      "@reroll/ui/*": ["./src/*"]
+      "@remix/ui/*": ["./src/*"]
     },
     "strictNullChecks": true
   },

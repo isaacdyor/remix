@@ -1,10 +1,10 @@
-import { Button } from "@reroll/ui/components/button";
+import { Button } from "@remix/ui/components/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@reroll/ui/components/dropdown-menu";
+} from "@remix/ui/components/dropdown-menu";
 import { Moon, Sun } from "lucide-react";
 
 import { useTheme } from "@/components/theme-provider";
