@@ -15,6 +15,9 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as AuthSignupRouteImport } from './routes/_auth.signup'
 import { Route as AuthLoginRouteImport } from './routes/_auth.login'
 import { Route as AppDashboardRouteImport } from './routes/_app.dashboard'
+import { Route as AppCreationsRouteImport } from './routes/_app.creations'
+import { Route as AppCreationsIndexRouteImport } from './routes/_app.creations.index'
+import { Route as AppCreationsCreationIdRouteImport } from './routes/_app.creations.$creationId'
 
 const AuthRoute = AuthRouteImport.update({
   id: '/_auth',
@@ -44,41 +47,80 @@ const AppDashboardRoute = AppDashboardRouteImport.update({
   path: '/dashboard',
   getParentRoute: () => AppRoute,
 } as any)
+const AppCreationsRoute = AppCreationsRouteImport.update({
+  id: '/creations',
+  path: '/creations',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppCreationsIndexRoute = AppCreationsIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => AppCreationsRoute,
+} as any)
+const AppCreationsCreationIdRoute = AppCreationsCreationIdRouteImport.update({
+  id: '/$creationId',
+  path: '/$creationId',
+  getParentRoute: () => AppCreationsRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/creations': typeof AppCreationsRouteWithChildren
   '/dashboard': typeof AppDashboardRoute
   '/login': typeof AuthLoginRoute
   '/signup': typeof AuthSignupRoute
+  '/creations/$creationId': typeof AppCreationsCreationIdRoute
+  '/creations/': typeof AppCreationsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/dashboard': typeof AppDashboardRoute
   '/login': typeof AuthLoginRoute
   '/signup': typeof AuthSignupRoute
+  '/creations/$creationId': typeof AppCreationsCreationIdRoute
+  '/creations': typeof AppCreationsIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/_app': typeof AppRouteWithChildren
   '/_auth': typeof AuthRouteWithChildren
+  '/_app/creations': typeof AppCreationsRouteWithChildren
   '/_app/dashboard': typeof AppDashboardRoute
   '/_auth/login': typeof AuthLoginRoute
   '/_auth/signup': typeof AuthSignupRoute
+  '/_app/creations/$creationId': typeof AppCreationsCreationIdRoute
+  '/_app/creations/': typeof AppCreationsIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/dashboard' | '/login' | '/signup'
+  fullPaths:
+    | '/'
+    | '/creations'
+    | '/dashboard'
+    | '/login'
+    | '/signup'
+    | '/creations/$creationId'
+    | '/creations/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/dashboard' | '/login' | '/signup'
+  to:
+    | '/'
+    | '/dashboard'
+    | '/login'
+    | '/signup'
+    | '/creations/$creationId'
+    | '/creations'
   id:
     | '__root__'
     | '/'
     | '/_app'
     | '/_auth'
+    | '/_app/creations'
     | '/_app/dashboard'
     | '/_auth/login'
     | '/_auth/signup'
+    | '/_app/creations/$creationId'
+    | '/_app/creations/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -131,14 +173,51 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AppDashboardRouteImport
       parentRoute: typeof AppRoute
     }
+    '/_app/creations': {
+      id: '/_app/creations'
+      path: '/creations'
+      fullPath: '/creations'
+      preLoaderRoute: typeof AppCreationsRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/creations/': {
+      id: '/_app/creations/'
+      path: '/'
+      fullPath: '/creations/'
+      preLoaderRoute: typeof AppCreationsIndexRouteImport
+      parentRoute: typeof AppCreationsRoute
+    }
+    '/_app/creations/$creationId': {
+      id: '/_app/creations/$creationId'
+      path: '/$creationId'
+      fullPath: '/creations/$creationId'
+      preLoaderRoute: typeof AppCreationsCreationIdRouteImport
+      parentRoute: typeof AppCreationsRoute
+    }
   }
 }
 
+interface AppCreationsRouteChildren {
+  AppCreationsCreationIdRoute: typeof AppCreationsCreationIdRoute
+  AppCreationsIndexRoute: typeof AppCreationsIndexRoute
+}
+
+const AppCreationsRouteChildren: AppCreationsRouteChildren = {
+  AppCreationsCreationIdRoute: AppCreationsCreationIdRoute,
+  AppCreationsIndexRoute: AppCreationsIndexRoute,
+}
+
+const AppCreationsRouteWithChildren = AppCreationsRoute._addFileChildren(
+  AppCreationsRouteChildren,
+)
+
 interface AppRouteChildren {
+  AppCreationsRoute: typeof AppCreationsRouteWithChildren
   AppDashboardRoute: typeof AppDashboardRoute
 }
 
 const AppRouteChildren: AppRouteChildren = {
+  AppCreationsRoute: AppCreationsRouteWithChildren,
   AppDashboardRoute: AppDashboardRoute,
 }
 

@@ -7,7 +7,7 @@ export const Route = createFileRoute("/")({
     const session = await authClient.getSession();
 
     throw redirect({
-      to: session.data?.user ? "/dashboard" : "/login",
+      to: session.data?.user ? "/creations" : "/login",
     });
   },
 });

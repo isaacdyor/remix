@@ -20,22 +20,16 @@ import {
   useSidebar,
 } from "@remix/ui/components/sidebar";
 import { Link, useNavigate, useRouterState } from "@tanstack/react-router";
-import {
-  ChevronsUpDown,
-  LayoutDashboard,
-  LogOut,
-  Moon,
-  Sun,
-} from "lucide-react";
+import { ChevronsUpDown, LogOut, Moon, Sparkles, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 
 import { authClient } from "@/lib/auth-client";
 
 const navItems = [
   {
-    icon: LayoutDashboard,
-    title: "Dashboard",
-    url: "/dashboard",
+    icon: Sparkles,
+    title: "Creations",
+    url: "/creations",
   },
 ] as const;
 
@@ -72,9 +66,9 @@ export function AppSidebar() {
         <SidebarMenu>
           <SidebarMenuItem>
             <SidebarMenuButton
-              render={<Link to="/dashboard" />}
+              render={<Link to="/creations" />}
               size="lg"
-              tooltip="Dashboard"
+              tooltip="Creations"
             >
               <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground">
                 <span className="font-semibold text-xs">R</span>
@@ -97,7 +91,10 @@ export function AppSidebar() {
               {navItems.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton
-                    isActive={pathname === item.url}
+                    isActive={
+                      pathname === item.url ||
+                      pathname.startsWith(`${item.url}/`)
+                    }
                     render={<Link to={item.url} />}
                     tooltip={item.title}
                   >
